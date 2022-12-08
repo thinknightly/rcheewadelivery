@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'rootPage.dart';
+import 'RootPage.dart';
 
 void main(List<String> args) {
   runApp(const RcheewaFood());
@@ -19,7 +19,7 @@ class _RcheewaFoodState extends State<RcheewaFood> {
       // Remove Debug Banner
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+        primarySwatch: Colors.red,
       ),
       home: const RootPage(),
     );
