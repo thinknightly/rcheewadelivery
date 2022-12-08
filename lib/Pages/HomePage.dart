@@ -7,10 +7,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "สวัสดี! User",
-          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-        ),
+        titleTextStyle: const TextStyle(
+            fontSize: 40,
+            fontFamily: 'IBM Plex Sans Thai',
+            color: Color.fromARGB(99, 200, 200, 200)),
+        title: const Text('สวัสดี! ผู้ใช้งาน'),
       ),
     );
   }
