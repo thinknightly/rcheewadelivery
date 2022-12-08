@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HistoryOrder extends StatefulWidget {
+class HistoryOrder extends StatelessWidget {
   const HistoryOrder({super.key});
 
   @override
-  State<HistoryOrder> createState() => _HistoryOrderState();
-}
-
-class _HistoryOrderState extends State<HistoryOrder> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "ประวัติการสั่งซื้อ",
+          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+        ),
+      ),
+    );
   }
 }

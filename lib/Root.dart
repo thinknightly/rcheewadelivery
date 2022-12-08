@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../Pages/HistoryOrderPage.dart';
-import '../Pages/TalkToShopPage.dart';
-import '../Pages/AccountPage.dart';
+import 'Pages/HomePage.dart';
+import 'Pages/HistoryOrderPage.dart';
+import 'Pages/TalkToShopPage.dart';
+import 'Pages/AccountPage.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
@@ -14,23 +15,18 @@ class _RootPageState extends State<RootPage> {
   // Set Variable for Bottom Navigator Selected
   int index = 0;
   // Set Pages List for Navigator
-  final pages = const [RootPage(), HistoryOrder(), TalkToShop(), AccountPage()];
+  final pages = const [HomePage(), HistoryOrder(), TalkToShop(), AccountPage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "RCheewa Delivery",
-          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-        ),
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('Cart is working well');
         },
         child: const Icon(Icons.shopping_cart_outlined),
       ),
+      body: pages[index],
       bottomNavigationBar: NavigationBarTheme(
           data: NavigationBarThemeData(
             labelTextStyle: MaterialStateProperty.all(
@@ -39,6 +35,8 @@ class _RootPageState extends State<RootPage> {
             indicatorColor: Colors.red.shade100,
           ),
           child: NavigationBar(
+              labelBehavior:
+                  NavigationDestinationLabelBehavior.onlyShowSelected,
               // Start - Set Selected Items on Navigator Bar
               selectedIndex: index,
               onDestinationSelected: (index) =>
