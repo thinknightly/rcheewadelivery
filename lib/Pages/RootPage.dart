@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'BottomNavBar.dart';
+import '../NavigationBar/BottomNavBar.dart';
 import 'AccountPage.dart';
 
 class RootPage extends StatefulWidget {
