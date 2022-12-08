@@ -19,6 +19,7 @@ class _RcheewaFoodState extends State<RcheewaFood> {
       // Remove Debug Banner
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'IBM Plex Sans Thai',
         primarySwatch: Colors.red,
       ),
       home: const RootPage(),
