@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class RecommendFoodCard extends StatefulWidget {
-  const RecommendFoodCard({super.key});
+class TypeFoodSlide extends StatefulWidget {
+  const TypeFoodSlide({super.key});
 
   @override
-  State<RecommendFoodCard> createState() => _RecommendFoodCardState();
+  State<TypeFoodSlide> createState() => _TypeFoodSlideState();
 }
 
 class CardItem {
@@ -16,31 +16,31 @@ class CardItem {
       {required this.urlImage, required this.title, required this.price});
 }
 
-class _RecommendFoodCardState extends State<RecommendFoodCard> {
+class _TypeFoodSlideState extends State<TypeFoodSlide> {
   List<CardItem> items = [
     const CardItem(
       urlImage:
           'https://images.unsplash.com/photo-1497800640957-3100979af57c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
       title: 'Hot Tea Set',
-      price: '149฿',
+      price: '150฿',
     ),
     const CardItem(
       urlImage:
-          'https://images.unsplash.com/photo-1521302080334-4bebac2763a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
-      title: 'Hot Black Coffee',
-      price: '79฿',
+          'https://images.unsplash.com/photo-1497800640957-3100979af57c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
+      title: 'Hot Tea Set',
+      price: '150฿',
     ),
     const CardItem(
       urlImage:
-          'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80',
-      title: 'Hot Matcha Milk Tea',
-      price: '59฿',
+          'https://images.unsplash.com/photo-1497800640957-3100979af57c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
+      title: 'Hot Tea Set',
+      price: '150฿',
     ),
     const CardItem(
       urlImage:
-          'https://images.unsplash.com/photo-1526424382096-74a93e105682?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
-      title: 'Mixed Cold Lime Soda Set',
-      price: '99฿',
+          'https://images.unsplash.com/photo-1497800640957-3100979af57c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
+      title: 'Hot Tea Set',
+      price: '150฿',
     ),
   ];
 
@@ -52,13 +52,12 @@ class _RecommendFoodCardState extends State<RecommendFoodCard> {
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
           child: Align(
               alignment: Alignment.centerLeft,
-              child: Text('เครื่องดื่มแนะนำประจำวันนี้',
+              child: Text('ประเภทเครื่องดื่ม',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
         ),
         SizedBox(
           height: 256,
           child: ListView.separated(
-            padding: const EdgeInsets.all(12),
             scrollDirection: Axis.horizontal,
             itemCount: items.length,
             separatorBuilder: (context, _) => const SizedBox(width: 12),

@@ -6,19 +6,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(60.0),
-          child: AppBar(
-            titleTextStyle: const TextStyle(
-                fontSize: 30,
-                fontFamily: 'IBM Plex Sans Thai',
-                color: Color.fromARGB(255, 80, 8, 8)),
-            title: const Text('สวัสดี! ผู้ใช้งาน'),
-            backgroundColor: Colors.transparent,
-            elevation: 0,
+          preferredSize: Size.fromHeight(60.0),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                'สวัสดียามเช้า! fullname.',
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'IBM Plex Sans Thai',
+                    color: Color.fromARGB(255, 80, 8, 8)),
+              ),
+            ),
           )),
-      body: const RecommendFoodSlideBar(),
+      body: RecommendFoodCard(),
     );
   }
 }
